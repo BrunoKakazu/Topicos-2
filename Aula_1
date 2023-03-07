@@ -1,0 +1,17 @@
+// Problem 1: Acumulador. Entrada de sequência de n-numeros inteiros e saida de soma dos numeros
+#include<iostream>
+
+int sum(int n, int seq[])
+{
+    int s = 0;
+    for(int i = 0; i < n; ++i)
+        s += *seq++;
+    return s;
+}
+
+int main()
+{
+    int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    std::cout<< "Sum:"<< sum(10, a)<< '\n';
+    return 0; 
+}
