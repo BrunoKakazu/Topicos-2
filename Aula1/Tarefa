@@ -1,0 +1,77 @@
+// Declarar as bibliotecas e definir macros
+#include <iostream>
+#define TAM 2
+
+// Criando a Lista Simplesmente Encadeada
+typedef struct List LL;
+
+struct List
+{
+    int Val;
+    LL* Head;
+    LL* Tail;
+    LL* Next;
+};
+
+// Declarando a lista
+void Construct(LL* Array)
+{
+    Array = new LL;
+    Array->Head = NULL;
+    Array->Next = NULL;
+    Array->Tail = NULL;
+
+}
+
+// Adiciona um item na lista
+void Add(int a, LL* Array, int count)
+{
+
+}
+
+// Retorna um true, se existir na lista caso contrário, false
+bool Contain(int b, LL* Array)
+{
+
+}
+
+// Remove um item da lista se for true, se não retorna false
+bool Remove(int c, LL* Array)
+{
+
+}
+
+// Limpa a lista
+bool Clear(LL* Array)
+{
+
+}
+
+// Retorna o tamanho da Lista
+int Size(LL* Array)
+{
+
+}
+
+// Destruindo a lista
+void Destruct(LL* Array)
+{
+    if(Array){
+        
+    }
+}
+
+// Criando a main
+int main()
+{
+    //Criando a lista
+    LL Array;
+    int caso;
+    int count = 0;
+
+    
+    Construct(&Array);
+
+    Destruct(&Array);
+
+}
