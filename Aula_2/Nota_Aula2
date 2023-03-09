@@ -1,0 +1,29 @@
+Irá começar LPOO em C++.
+Classe é uma definição de um tipo de objeto. Essa definição são definidas pelos membros declaradas na classe.
+Os membros seriam atributos e métodos(principais, existem outros). Struct e class não há diferenças, únicas coisas que mudam são as visibilidades.
+Um objeto estático é criando um objeto.
+Int i; -> Int é uma classe, que não ocupa espaço, porém o objeto i ocupa espaço. Nele está todo os métodos e atributos da classe, logo na classe int o "i" pode pode fazer mult, soma, sub e entre outros.
+Em uma classe os membros é privado por default, logo não há necessidade de declará-la, porém não é ruim deixar explicito. Na struct tudo é publico por default.
+Método construtor que não toma parâmetro é conhecido como construtor default.
+NULL é considerado como null 0. Quando declarado, APENAS, 0 no ponteiro, o compilador irá convertê-la para nullptr
+A diferença entre IntArray e new é que em IntArray ela irá alocar de forma estática, já o new irá alocar de forma dinâmica. Ou seja, na forma estática ela irá alocar espaço na pilha do main, já o new irá alocar na heap.
+Objeto é uma coleções de atributos.
+Se tem um  NEW tem que ter um DELETE
+
+Incremento do +1 depois dele ter terminado
+size++()
+{
+auto temp = size;
+size +=1;
+return temp
+}
+
+Incremento antes dele ser usado
+++size()
+{
+return size += 1;
+}
+
+this é um ponteiro para o receptor
+
+Um método const não altera o receptor da mensagem
