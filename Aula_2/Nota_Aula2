@@ -27,3 +27,6 @@ return size += 1;
 this é um ponteiro para o receptor
 
 Um método const não altera o receptor da mensagem
+
+
+Nesta aula foi-se feito uma classe de container, que é uma coleção.
