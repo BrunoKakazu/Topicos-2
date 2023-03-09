@@ -1,3 +1,15 @@
+A tarefa consiste em fazer uma array dinâmico com elementos de número inteiro as funções:
+void add(int i) -> adicionar valores dentro do array
+bool contain(int i) -> Retornar true ou false do valor digitado
+bool remove(int i) -> Se true remover o numero desejado ou mostrar false caso não tenha o numero
+bool clear() -> limpar e destruir o array
+int size() -> devolver o tamanho do array
+A array inicialmente com tamanho 2 e irá aumentar exponecialmente, para aumentar será necessário criar um outro array porém com +2 add, fazer uma cópia do anterior e colocar nos espaços e depois distruir a anterior copiada e continuar na última posição do anterior
+
+######################################################################################################################################################################################################################################################################################
+######################################################################################################################################################################################################################################################################################
+
+
 // Declarar as bibliotecas e definir macros
 #include <iostream>
 #define TAM 2
