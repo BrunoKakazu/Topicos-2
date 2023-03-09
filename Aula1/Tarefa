@@ -35,55 +35,176 @@ void Construct(LL* Array)
 
 }
 
+// Retorna o tamanho da Lista
+int Size(LL* Array)
+{
+    LL* Aux;
+    int count = 0;
+
+    // Verifica quantos espaços existem, conta também os vazios
+    while(Aux->Next != NULL)
+        count++;
+    
+    return count;
+}
+
 // Adiciona um item na lista
 void Add(int a, LL* Array, int count)
 {
+    LL* Aux;
 
+    Aux = Array;
+
+    while(Aux->Val != NULL)
+    {
+
+        // Verifica se o próximo de Aux é nulo e se o valor na cauda não nulo
+        if(Aux->Next == NULL && Aux->Tail->Val != NULL)
+        {
+            count++;
+            int n;
+            n = count<<1;
+
+            for(int i=0; i<n; i++)
+            {
+                LL* Space;
+                Space = new LL;
+                Space->Next = Array->Next;
+                Array->Tail = Space;
+            }
+
+            Aux = Aux->Next;
+            Aux->Val = a;
+        }
+        else
+        {
+            Aux = Aux->Next;
+        }
+    }
 }
 
 // Retorna um true, se existir na lista caso contrário, false
 bool Contain(int b, LL* Array)
 {
-
+    LL* Aux;
+    Aux = Array;
+    
+    while(Aux->Val != b)
+    {
+        if(Aux->Val == b)
+            return true;
+        else if(Aux->Next == NULL)
+            return false;
+        else 
+            Aux = Aux->Next;
+    }
 }
 
 // Remove um item da lista se for true, se não retorna false
 bool Remove(int c, LL* Array)
 {
+    bool p;
+    p = Contain(c, Array);
 
+    if(p)
+    {
+        LL* Aux;
+        int n;
+        n = Size(Array);
+        
+        for(int i; i<n; i++)
+        {
+            if(Aux->Val != c)
+            {
+                Aux->Val = c;
+                Array->Val = NULL;
+                free(Aux);
+            }  
+        }
+
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 // Limpa a lista
 bool Clear(LL* Array)
 {
+    LL* Aux;
 
-}
-
-// Retorna o tamanho da Lista
-int Size(LL* Array)
-{
-
-}
-
-// Destruindo a lista
-void Destruct(LL* Array)
-{
-    if(Array){
-        
+    while(Aux->Next != NULL)
+    {
+        Aux = Array->Next;
+        Array->Head->Next;
+        free(Aux);
     }
 }
+
 
 // Criando a main
 int main()
 {
     //Criando a lista
     LL Array;
-    int caso;
+    int opcao;
     int count = 0;
 
-    
     Construct(&Array);
 
-    Destruct(&Array);
+    std::cout << "Digite a opção que deseja fazer: " << std::endl;
+    std::cout << "(1) Add" << std::endl;
+    std::cout << "(2) Contain" << std::endl;
+    std::cout << "(3) Remove" << std::endl;
+    std::cout << "(4) Clear" << std::endl;
+    std::cin >> opcao;
+    
+    switch(opcao)
+    {
+        case 1:
+            int a;
+            std::cout << "Digite o número que deseja adicionar: " << std::endl;
+            std::cin >> a;
+            Add(a, &Array, count);
+        case 2:
+            int b;
+            bool res;
+            std::cout << "Digite um número que deseja procurar: " << std::endl;
+            std::cin >> b;
+            res = Contain(b, &Array);
+
+            if(res)
+                std::cout << "Esse número está na lista" << std::endl;
+            else
+                std::cout << "Este número não está na lista" << std::endl;
+        case 3:
+            int c;
+            bool res;
+            std::cout << "Digite um número para remove-lá: " << std::endl;
+            res = Remove(c, &Array);
+
+            if(res)
+                std::cout << "Número removido da lista!" << std::endl;
+            else
+                std::cout << "Este número não está na lista ou já foi removido" << std::endl;
+        case 4:
+            bool res;
+            res = Clear(&Array);
+
+            if(res)
+                std::cout << "Lista limpa!" << std::endl;
+            else
+                std::cout << "Lista já removida" << std::endl;
+
+    }
 
 }
+
+/*
+Lógica do shift para esquerda. Exemplo:
+1<<1 -> Quer dizer que 0001(que é 1), passa para 0010(que é 2)
+1<<2 -> Quer dizer que 0001 passa para 0100(que é 4)
+2<<1 -> Quer dizer que 0010 passa para 0100(que é 4)
+*/
