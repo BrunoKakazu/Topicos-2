@@ -1,0 +1,27 @@
+Sobrecarga de operador em C++ -> ela é vantajoso para manipulação de número complexos
+sobrecarga pode ser feito a partir de uma função ou método, desde que atenda a semântica
+inline -> não tem overehead na chamada de função
+overhead -> ele salta e realiza várias chamadas para setar, armazenar e retornar os valores pré setadosm e depois desaloca da pilha e retorna da onde ela saltou
+struct complex
+{
+  auto operator+(const complex& c2) const
+  {
+    return complex(this->a+c2.a, this->b+c2.b);
+  }
+};
+
+inline auto operator+(const complex& c1, const complex& c2)
+{
+  complex c;
+  return c;
+}
+
+struct complex
+{
+  auto operator++() -> essa função é para pré-incremento
+  auto operator++(int) -> este é pós-incremento
+}
+
+Existem 2 tipos de interator:
+- Iterator constante
+- Iterator não constante
