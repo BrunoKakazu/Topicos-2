@@ -1,0 +1,15 @@
+Você só pode copiar objetos do mesmo tipo.
+Em C++ a gente vê da direita para a esquerda.
+
+
+IntCollection c = IntArray(10); X -> Este não pode, pois é de objeto para objeto
+IntArray a = IntCollection(); JAMAIS
+IntCollection c = new IntArray(10); PODE -> Este pode, pois ele é de ponteiro para um objeto
+
+Outra forma seria
+IntArray a(10);
+IntCollection* p = &a;
+Com isto têm-se
+p->begin();
+p->end();
+
