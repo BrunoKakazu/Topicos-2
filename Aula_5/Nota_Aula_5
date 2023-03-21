@@ -1,1 +1,42 @@
+Collection e Conjunto são classes tão genéricos que não consegue-se dar um new para criar um objeto e a diferença entre Collection e COnjunto são as semânticas.
+A herança é pública por default. Quando herda-se algo protected, tudo que o que é publico será herdado como publico, porém tudo que é privado ou protected será herdado como privado. Quando tudo é herdado privado, tudo é privado, já quando publico, tudo é herdadeo de forma publica, ou seja, B que herda de A, o B pode acessar tudo o que é publico, privado e protected, já na parte privada, B não consegue acessar nada de A(os atributos e métodos).
 
+struct A
+{
+  void f();
+};
+
+struct B:A
+{
+  void f();
+};
+
+A a;
+a.f(); -> ele possui 1 chamada
+
+B b;
+b.f() override; -> b possui 2 chamadas, pois ele chama a estrutura B e o que foi herdado de A
+b.A::f(); -> para chamar a função de A é necessário declaras desta forma
+
+Em toda classe com método virtual o compilador cria um ponteiro para a lista de métodos virtuais
+
+Herança é boa para reaproveitamento deo código
+
+A partir de parâmetros você consegue diferenciar os métodos que é o polimorfismo, ou comportamento especializadou(sobrescrito), para isso é necessário implementar métodos virtuais.
+
+Implementar métodos virtuais são ótimos para sobrescrever e dar comportamento especializado, porém ele tem overhead devido ao tipo de chamada que ele faz. A chamada é ex: p->(_tpmr[0])(); -> ou seja, ele vai na lista, vai na posição pra depois dar um jump
+
+Matemática+Programação+EngSoft = Projeto pronto e sabendo o q vai fazer
+
+int s{}; -> s= 0 ou s(0)
+
+Para dizer que ele é abstrato, é necessário fazer ele como virtual puro, ou seja, seu corpo tem não existir, logo tem que ser igual a 0. Não se pode ser instanciada, tem que se reescrever para poder ser instanciada.
+
+
+
+
+
+
+TAREFA:
+- ENTENDER MELHOR O MÉTODO VIRTUAL
+- VER O QUE É TPMV
