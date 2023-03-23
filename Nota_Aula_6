@@ -1,0 +1,17 @@
+Template é um molde para o compilador gerar um código
+
+Pode ter molde de função e classe
+
+Molde ou template começa com uma palavra reservada chamada template e dentro de <> vai uma lista de parâmetro. Um template é parametrizado
+
+No lugar de typename pode ser escrito como class
+
+Para o caso de função, pode-se omitir o argumentos de tipos desde que os argumentos possam ser deduzidos pela própria argument gerados
+
+Uma especialização de um template de função é como se fosse uma sobrecarda do template
+
+constexpr palavra reservada do C++14 em diante. Se o argumento da chamada for constante o compiladore resolve, caso não seja ele executa no tempo de execução
+
+Meta função pode devolver um valor ou 
+
+Decltype retorna o tipo de uma variavel
