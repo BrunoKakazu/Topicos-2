@@ -5,3 +5,40 @@ int a[20];
 
 Qual o tipo de i? R: int[10]
 Qual o tipo de p? R: *int[10]
+Qual o tipo de conteúdo de p? R: int[10]
+
+Para inicializar o i -> int i[10] = {1,2,3,4,5,6,7,8,9,10}; Em C++ não é necessário o "=", pode-se ser escrito da seguinte maneira int v[] = {1,2,3,4}. Neste caso ele retornará um int[4]. Outra forma que pode ser escrita é:
+
+auto p = new int[]{1,2,3,4};
+
+size_t é mesma coisa que using size_t = unsigned long long
+
+lico ou lowmajor -> ela serve para armazenar códigos com formato de matriz. Para Pascal é collum major Ex:
+
+a11 a12
+a21 a22
+a31 a32
+
+Em C++ ele é declarada como a11 a12|a21 a22|a31 a32 (Fim do exemplo)
+
+Para a declaração de matriz -> int a[3][2]; que é int[3][2]
+
+Para achar uma matriz a[1][1] o código lê da seguinte maneira p[r*2+c] logo ele acha a posição de a[1][1]
+
+Para inicialização de matriz. Ex:
+
+int a[3][2]{{1,2}, {3,4}, {5,6}};
+
+Outra forma de inicializar
+
+int a[][2]{{1,2}, {3,4}, {5,6}}; É NECESSÁRIO INICIALIZAR O SEGUNDO, justamente pela forma de busca do compilador do C++ que é p[r*2+c] onde r é o 2.(Fim do exemplo)
+
+Em C++ não se pode devolver um array e nem uma função devolver uma função, porém array pode aparecer como parâmentro de uma função. Ex:
+
+void f(int i[10]) -> nesta parte, como parâmetro, ele há um decaimento e passa de ser um vetor para um ponteiro
+{
+
+}
+(Fim do exemplo)
+
+Quando declarado um array por parâmetro, esse array decai para um ponteiro. Nunca se usa um array cru como parâmetro
