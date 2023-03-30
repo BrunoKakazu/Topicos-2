@@ -1,3 +1,5 @@
+ EXPRESSÕES DE TIPO EM C++
+
 Dado o código
 int i[10];
 auto p = new int[10];
@@ -66,4 +68,5 @@ int* (*p8[10])(); -> array de 10 de ponteiro de função de ponteiro
 
 ()-> serve para denominar precedência ou função
 
-
+RECEITA 2
+Referância L value
