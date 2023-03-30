@@ -1,0 +1,7 @@
+Dado o código
+int i[10];
+auto p = new int[10];
+int a[20];
+
+Qual o tipo de i? R: int[10]
+Qual o tipo de p? R: *int[10]
