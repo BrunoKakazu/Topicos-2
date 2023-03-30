@@ -65,6 +65,9 @@ int* (*p5[10])[10]; -> array de 10 de ponteiro para array 10 de ponteiro de inte
 int* p6(); -> função de ponteiro de inteiro. Seu tipo é int*(). Em auto x=p6; -> ele decai para um endereço de ponteiro, ou seja, x = &p6;
 int* (*p7)(); -> ponteiro de função de ponteiro de inteiro. um ponteiro eleva, ou seja (*p7)() = p7();
 int* (*p8[10])(); -> array de 10 de ponteiro de função de ponteiro
+cont int* p11; -> ponteiro de inteiro constante. Neste caso vc pode fazer p11 = &a, porém não pode fazer *p11 = 2;
+int* const p12 = &a; -> constante de ponteiro de inteiro. Ele faz o contrário do de cima
+const int* const p13 = &a; -> constante de ponteiro de inteiro de constante. Ele não deixa mudar nada.
 
 ()-> serve para denominar precedência ou função
 
