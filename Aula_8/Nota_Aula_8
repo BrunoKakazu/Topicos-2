@@ -41,4 +41,29 @@ void f(int i[10]) -> nesta parte, como parâmetro, ele há um decaimento e passa
 }
 (Fim do exemplo)
 
-Quando declarado um array por parâmetro, esse array decai para um ponteiro. Nunca se usa um array cru como parâmetro
+Quando declarado um array por parâmetro, esse array decai para um ponteiro. Nunca se usa um array cru como parâmetro.
+
+Em:
+int a[20];
+auto x = a; -> é um *int
+
+Em:
+auto p = new int[]{1, 2, 3, 4}
+auto w = *p; -> Seu tipo é int e ele irá pegar o primeiro elemento do vetor
+
+*-> antes do nome do objeto a ser nomeado
+[]-> após o nome do objeto
+
+Nomenclatura:
+int* p1;-> ponteiro de inteiro
+int* p2[10]; -> array de 10 de ponteiro de inteiro
+int** p3[10]; -> array de 10 de ponteiro de ponteiro para inteiro
+int* (*p4)[10]; -> ponteiro de p4 para um array 10 para ponteiro de inteiro
+int* (*p5[10])[10]; -> array de 10 de ponteiro para array 10 de ponteiro de inteiro. Seu tipo é int*(*[10])[10]
+int* p6(); -> função de ponteiro de inteiro. Seu tipo é int*(). Em auto x=p6; -> ele decai para um endereço de ponteiro, ou seja, x = &p6;
+int* (*p7)(); -> ponteiro de função de ponteiro de inteiro. um ponteiro eleva, ou seja (*p7)() = p7();
+int* (*p8[10])(); -> array de 10 de ponteiro de função de ponteiro
+
+()-> serve para denominar precedência ou função
+
+
