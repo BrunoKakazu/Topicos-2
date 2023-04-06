@@ -4,7 +4,7 @@ Toda literal string em C é uma  ASCIIZ
 
 Não se faz um for(int i; i < strlen(s); ++i) => o strlen(s) chama uma função e se colocada no for ele é chamada toda hora
 
-Existem dois tipos de cópias, uma rasa e uma profunda.
+Existem dois tipos de cópias, uma rasa(que é chamada de forma default) e uma profunda.
 
 A cópia rasa copia-se somente o endereço do objeto apontado, ela pode gerar um ponteiro pendente. Para cópia rasa é recomendado quando não ponteiros e alocação de forma dinâmica
 
