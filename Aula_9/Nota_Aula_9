@@ -3,3 +3,4 @@ Pragama é uma diretiva de pré-processamento, são instruções que voce passa 
 Toda literal string em C é uma  ASCIIZ
 
 Não se faz um for(int i; i < strlen(s); ++i) => o strlen(s) chama uma função e se colocada no for ele é chamada toda hora
+
