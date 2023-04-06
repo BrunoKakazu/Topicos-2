@@ -4,3 +4,17 @@ Toda literal string em C é uma  ASCIIZ
 
 Não se faz um for(int i; i < strlen(s); ++i) => o strlen(s) chama uma função e se colocada no for ele é chamada toda hora
 
+Existem dois tipos de cópias, uma rasa e uma profunda.
+
+A cópia rasa copia-se somente o endereço do objeto apontado, ela pode gerar um ponteiro pendente
+
+A cópia profunda copia o conteúdo do objeto copiado, ou seja, aloca-se uma nova memória para alocara o conteúdo copiado
+
+explicit => palavra reservada. Ela não deixa compilar caso algo declarado não seja explicito. Ex:
+
+String s1 = "FACOM"; => sem explicit ele irá compilar pois tem uma função que aceita esse formato, pois o compilador realiza um conversor de tipo
+String s1 = {"FACOM"} ou s1 = String("FACOM"); => Neste caso o explicit está sendo utilizado, então o exemplo anterior não é mais válido.
+
+Ponteiro pendente é um ponteiro que aponta para um local que já foi liberada.
+
+"FACOM" -> é um const char* const
