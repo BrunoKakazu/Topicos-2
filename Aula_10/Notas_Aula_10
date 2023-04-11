@@ -1,0 +1,2 @@
+BasicString (BasicString &&) noxcept; => é uma referência RValue. Além disto ele é um construtor de movimento
+
