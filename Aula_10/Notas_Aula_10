@@ -1,2 +1,12 @@
-BasicString (BasicString &&) noxcept; => é uma referência RValue. Além disto ele é um construtor de movimento
+BasicString (BasicString &&) noexcept; => é uma referência RValue. Além disto ele é um construtor de movimento
 
+noexcept => esse método não pode ser disparado uma excessão
+
+atributo é algo que está entre => [[atributo]]
+nodiscard => ele gera uma advertência quando há um descarte de resposta
+Ex:
+[[nodiscard]] bool operator ==(const BasicString &) const; => neste caso o nodiscard irá gerar uma advertência caso o resultado devolvido disto é descartado
+
+Qualquer declaração pode receber atributo.
+
+friend pode ser também uma função
