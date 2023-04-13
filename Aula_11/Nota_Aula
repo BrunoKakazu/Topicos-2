@@ -21,3 +21,4 @@ prvalue não tem identidade e pode ser movido.(é primário) Ex: String f(); aut
 
 Algo primário é quando ele possui as duas caracteristicas(glvalue e rvalue), não importa suas condições, possuindo os dois é primário.
 
+Exercício: Testar todas as funcionalidade em cada método(colocar print) para entender toda a sequência que ele faz.
