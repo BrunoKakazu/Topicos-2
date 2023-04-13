@@ -1,2 +1,23 @@
 Aula sobre movimento
  o movimento tende a ser mais barato do que a cópia.
+
+Todo parâmetro é uma LValue, mesmo que esse argumento é constante.
+
+std::move() torna algo em RValue
+
+A cópia voce quer clonar o outro, ou seja, quer tudo o que ele tem igual e ele quer destruir tudo o outro
+
+O movimento, quer tomar tudo o que o outro tem sem precisar destruir tudo o que ele tem
+
+glValue é toda expressão que possui identidade, ou seja, a gente pode endereçar ele
+
+rValue é um objeto que pode ser movível.
+
+lvalue tem identidade(ou seja, é um glvalue), porém não se pode realizar movimento.(ele é primário, pois possui os dois). Ele pode passar o endereço, pois ele é identificado. Todo parêmtro de função é um lvalue.
+
+xvalue tem identidade(é um glvalue) e pode ser movido(é rvalue)(é primário)
+
+prvalue não tem identidade e pode ser movido.(é primário) Ex: String f(); auto s = s = f(); => neste caso o f() é um prvalue. Uma constante também é prvalue, pois ele não possui atributos ou algo para se copiar
+
+Algo primário é quando ele possui as duas caracteristicas(glvalue e rvalue), não importa suas condições, possuindo os dois é primário.
+
