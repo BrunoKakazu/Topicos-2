@@ -10,3 +10,6 @@ String& r = f(); => Ele está tentando pegar a referência para lvalue, que não
 
 String&& rr = f(); => Neste caso ele está tentando pegar a referência para rvalue de f(), que pode, pois como é um temporário e temporários são rvalue, ele pode ser pego, porém a partir do momento que é colocada o temporário em rr, o rr deixa de ser um rvalue para lvalue, ou seja, você pode chamar o endereço de rr.
 
+o auto não dedus uma referência, então quando você faz:
+auto x4 = std::move(r8); => x4 é um objeto e esse objeto está recebendo um referência rvalue
+
