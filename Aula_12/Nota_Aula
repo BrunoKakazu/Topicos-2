@@ -1,2 +1,8 @@
 Quando o programa utiliza alocações dinâmicas e utiliza funções providas pelo compilador durante seu ciclo de vida, ao final de sua vida ela terá que devolver essas funções ao compilador, porém o compiladro nos provê uma cópia rasa e em circunstâncias como essas ele não sabe se isso será o suficiente e poderá ocasionar em ponteiros perdidos, para isso é necesserária criar uma cópia profunda.
 
+A lógica esperada do movimento é roubar as funções alocadas dinamicamente ao longo do seu programa, pois copiá-las é muito custoso, ou seja, tenho uma ovelha em um cerco que cabe somente ele e preciso colocá-la em outro lugar, ao invés de fazer uma cópia, que fará com que as duas ovelhas fiquem apertados, é custoso fazer uma ovelha idêntica, para isso o movimento entra em açao. Com o movimento você rouba a ovelha do outro cercado, essa cercado que existia ovelha fica vazio e a outra, que está com um lugar melhor que a anterior, está com a ovelha.
+
+LValue é quando pode-se identificar um objeto ou qualquer coisa.
+
+RValue imagine que é uma constante ou um temporário. Ex: o resultado de A+B é temporário, caso ela não seja atribuída a nada outra forma é uma função f(), ele também é um temporário.
+
