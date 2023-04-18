@@ -9,3 +9,4 @@ RValue imagine que é uma constante ou um temporário. Ex: o resultado de A+B é
 String& r = f(); => Ele está tentando pegar o endereço de r, que não existe, pois um objeto temporário não possui um endereço
 
 String&& rr = f(); => Neste caso ele está tentando pegar o endereço de rvalue de f(), que pode, pois como é um temporário e temporários são rvalue, ele pode ser pego, porém a partir do momento que é colocada o temporário em rr, o rr deixa de ser um rvalue para lvalue, ou seja, você pode chamar o endereço de rr.
+
