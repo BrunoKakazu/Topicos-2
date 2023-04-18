@@ -1,1 +1,2 @@
+Quando o programa utiliza alocações dinâmicas e utiliza funções providas pelo compilador durante seu ciclo de vida, ao final de sua vida ela terá que devolver essas funções ao compilador, porém o compiladro nos provê uma cópia rasa e em circunstâncias como essas ele não sabe se isso será o suficiente e poderá ocasionar em ponteiros perdidos, para isso é necesserária criar uma cópia profunda.
 
