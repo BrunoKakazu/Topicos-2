@@ -5,3 +5,5 @@ rri = 2;
 
 No exemplo acima não há um objeto criado chamado rri ele é alguém que referencia, logo quando é declarado rri = 1, não há mudança no rri, pois ele não é um objeto e o conteúdo de um temporário(temp = 1), logo ele está mudando o valor temporário temp = 2.
 
+O Contrutor Default é declarado pelo compilador quando ele nunca foi declarado em nenhum lugar, o de Construtor Cópia somente é construído quando não for utilizado o de Construtor de Movimento, caso seje declarado ele irá optar por utilizar o Construtor de Movimento, o Construtor de Movimento nunca é declarado pelo compilador e o Destrutor é sempre declarado, casa não haja.
+
