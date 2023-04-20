@@ -1,1 +1,7 @@
+Continuação da aula de rvalue e lvalue
+
+int&& rri = 1;
+rri = 2;
+
+No exemplo acima não há um objeto criado chamado rri ele é alguém que referencia, logo quando é declarado rri = 1, não há mudança no rri, pois ele não é um objeto e o conteúdo de um temporário(temp = 1), logo ele está mudando o valor temporário temp = 2.
 
