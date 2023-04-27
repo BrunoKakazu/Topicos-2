@@ -1,1 +1,15 @@
-Teste
+Uma excessão nem sempre é um erro. Ele nos possibilita o tratamento deste erro sem terminar o programa.
+
+Tipos de excessões:
+Error, evento que não pode e nem deve ser tratado. Neste caso o programa deve parar. Ex: Encheu o disco, neste caso o programa deve parar. Erros de entrada e saída. Coisas impossíveis de ser continuados
+
+Exception, são anomalias que podem ser tratadas, a maioria podem e devem ser traradas, porém há outros erros que não podem ser tratadas. Como por exemplo a runtime exception(divisão por zero). Esses são erros de lógica. Para estes tipos de erros é utilizado o assert, que são erros que apresentam apenas na compilação por debugger.(isso é somente para java, em C++ todas as excessões podem ser tratadas)
+
+Mais um exemplo de runtime execption:(em Java)
+Object o = null;
+o.clone(); => neste caso, irá dar runtime pois ele está tentando clonar um objeto null, ou seja, erro de lógica.
+
+Em C++ qualquer coisa pode ser uma excessão.
+
+Se não tiver memória disponível o malloc retorna nulo
+
