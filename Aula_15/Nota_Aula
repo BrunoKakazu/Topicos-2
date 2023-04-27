@@ -13,3 +13,4 @@ Em C++ qualquer coisa pode ser uma excessão.
 
 Se não tiver memória disponível o malloc retorna nulo
 
+Excessão não move o objeto.
