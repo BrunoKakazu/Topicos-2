@@ -14,3 +14,5 @@ Em C++ qualquer coisa pode ser uma excessão.
 Se não tiver memória disponível o malloc retorna nulo
 
 Excessão não move o objeto.
+
+Para passar dos métodos de cópia os dois métodos seria utilizar o movimento ou passar o endereço do objeto, porém quando passar por endereço, na hora de devolver, ele acaba perdendo o dono(se tornando um ponteiro flutuante), para isto, você utiliza handle e body para auxiliá-los, no final você fará uma cópia de um handle
