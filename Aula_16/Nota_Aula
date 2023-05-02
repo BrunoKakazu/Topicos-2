@@ -17,3 +17,6 @@ FactoreMassage é um objeto ou uma funcionalidade que é responsável por criar 
 Nem e Delete podem ser sobrecarregados e receber parâmetros adicionais
 
 ::  algo => indica que você está criando algo global, ou seja, ele não é restrito somente a esta classe.
+
+
+handle & body é uma mecânica utilizando SmartPointer aonde o handle é um SmartPointer que irá manipular as propriedades do objeto que é o body. No body irá conter todas as propriedades para as operações ou certas funcionalidades.
