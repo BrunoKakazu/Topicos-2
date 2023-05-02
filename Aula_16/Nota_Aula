@@ -11,3 +11,9 @@ Esse contador de refência deve ter a capacidade de incrementar e decrementar a 
 Quando o contador de referência chegar a zero ele pode ser excluído a partir do delete
 
 std::shared_ptr<T> -> é uma bilbioteca padrão para smart pointer. Ele não é igual ao nosso que tem um objeto que é compartilhado e dentro dele possui um contador de referência, mas sim ele internamente possui um contador que aponta para esse contador para mantê-lo.
+
+FactoreMassage é um objeto ou uma funcionalidade que é responsável por criar um objeto
+
+Nem e Delete podem ser sobrecarregados e receber parâmetros adicionais
+
+::  algo => indica que você está criando algo global, ou seja, ele não é restrito somente a esta classe.
