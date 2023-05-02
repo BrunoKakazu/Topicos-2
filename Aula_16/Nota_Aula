@@ -1,1 +1,12 @@
+Smart Pointer é o melhor uso para quando possui objetos de forma dinâmica, ou seja, o objeto que iremos manipular se encontra no heap.
+
+Geralmente o objeto criado na heap é compartilhado.
+
+Os ponteiro espertos consegue, de alguma maneira, controlar a quantidado de vezes que ele está sendo compartilhado. Esse número tem que ser mantido em algum lugar e eles são dois:
+
+Dentro do SmartPointer ou dentro do objeto criado dinâmicamente.
+
+Esse contador de refência deve ter a capacidade de incrementar e decrementar a quantidade de refeências sendo feitas, independete de onde ela está sendo referenciado
+
+Quando o contador de referência chegar a zero ele pode ser excluído a partir do delete
 
