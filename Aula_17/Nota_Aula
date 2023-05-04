@@ -1,0 +1,46 @@
+P1 -> Vai ser uma calculadora de matriz de tamanho 2x2
+Command:
+  Assingment
+  ExpressionStatement
+  CLEAR IdentifierList?
+  LIST IDENTIFIER(TOKEN)?
+  EXIT
+  
+Assignment:
+  ("[" ReferenceList "]" | Reference) "=" Expression
+  
+Reference:
+  IDENTIFIER ("(" ArgumentList? ")")?
+  
+ReferenceList:
+  Reference("," Reference)*
+  
+ArgumentList:
+  (":" | Expression) ("," (":"| Expression))?
+  
+Expression:
+  AdditiveExpression (":" AdditiveExpression)*
+  
+AdditiveExpression:
+  MultiplicativeExpression (("+" | "-")  MultiplicativeExpression)*
+  
+MultiplicativeExpression:
+  UnaryExpression (("*" | "/" | "\") UnaryExpression)*
+  
+UnaryExpression:
+  ("+" | "-") UnaryExpression | Transpose
+  
+Transpose:
+  PrimaryExpression "'"*
+  
+PrimaryExpression:
+  "(" Expression ")" | SIZE "(" Expression ")" | Reference | Integer | Real | Matrix
+  
+Matrix:
+  "[" ExpressionList (";" ExpressionList)* "]" | "[" "]"
+  
+ExpressionsStatement:
+  ExpressionList
+  
+IdentifierList:
+  Identifier(","? Identifier)*
