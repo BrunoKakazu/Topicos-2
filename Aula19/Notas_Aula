@@ -1,0 +1,15 @@
+No trabalho 1 o std::variante é uma união
+
+Função Variádica
+
+... -> é um argumento variável, ou seja, pode ser qualquer argumento
+
+Templete Variádico
+Possui uma variedade de parâmetos de Template, podendo ser tipos ou literais
+
+Referência universal
+
+É quando têm-se:
+
+auto&& rr1 = f(); => Ele aceita
+auto&& rr2 = a; => Ele também aceita, pois neste caso ele tenta predizer o seu tipo
