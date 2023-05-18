@@ -1,5 +1,7 @@
 No trabalho 1 o std::variante é uma união
 
+Argumentos Variádicos
+
 Função Variádica
 
 ... -> é um argumento variável, ou seja, pode ser qualquer argumento
@@ -13,3 +15,6 @@ Referência universal
 
 auto&& rr1 = f(); => Ele aceita
 auto&& rr2 = a; => Ele também aceita, pois neste caso ele tenta predizer o seu tipo
+
+
+std::foward irá retirar uma referência universal para uma referência deduzido, podendo ser lvalue ou rvalue, dependendo da forma declarada durante a programação
