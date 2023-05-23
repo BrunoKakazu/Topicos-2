@@ -1,1 +1,32 @@
 Template Variádico
+
+
+std::foward<t>(a) -> a expressão a de um template T é convertida para lvalue ou rvalue a partir do seu tipo deduzido anteriorimente, ou seja, quando um objeto possui referência universal e ela for deduzida como rvalue, o foward irá torná-la como rvalue e vice versa.
+
+
+struct F
+{
+  int* operator ()(int*) const;
+}
+
+int* x(int*)
+{
+}
+
+F t;
+t(&rri); => Ele parece uma função, porém é uma operação com () sobrecarregado
+
+std::function -> é um template
+
+std::function<int*(int*)> f = x;
+ou
+std::function<int*(int*)> f = t; => isso é possível pois a function é superior
+ou
+std::function<int*(int*)> f = [](auto pi); => o [](auto pi) é um lambda, ela é considerado como uma expressão anônima
+o que vai dentro de [] significa que é uma captura de contexto. Pode colocar uma lista, especificando.
+
+[&] => todos os parâmetros dentro dele são passados por referência
+[=] => todos os parâmetros são passador por cópia
+
+Um template variádico é um template que recebe um número variádico de argumentos de tipo. Forma de declaração template <typename... Args>
+
