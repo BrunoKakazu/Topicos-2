@@ -1,0 +1,10 @@
+std::function é uma ferramneta que nos permite declarar genereicamente uma função, ela é um ponteiro com funcinalidade extendidas, ela pode receber uma expressão lambda
+
+Expressão Lambda
+Ela começa com []=> dentro dela são elementos de captura da lambada, ou seja, são parâmetros que você pode usar dentro da função.
+O uso típico da lambda é para quando você necessita, localmente e passar uma função, uma única vez, como parêmetro função. Para que isso seja possível você tem que declarar o std::function para que a função poça ser atrubuída a uma outra função.
+
+Passagem por parâmetro é quando você define(declara) algo dentro da função e um argumento é quando você chama(utiliza) algo para dentro de uma função.
+
+Ex:
+using logfunc = 
