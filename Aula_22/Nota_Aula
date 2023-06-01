@@ -1,0 +1,21 @@
+Template variádicos de classe (Tuplas)
+
+add(cont T& t) => template de função
+
+auto retira a referência, então:
+
+int& kk(int& i)
+{
+  return i;
+}
+
+int var;
+auto r = kk(var); => neste caso era para devolver uma referência de interio, mas ele joga a referência para fora.
+
+Para ele receber como referência de inteiro você deve colocar da seguinte maneira.
+auto& r = kk(var);
+
+FIM EXEMPLO
+
+o auto retira a referência, mas não o const
+
