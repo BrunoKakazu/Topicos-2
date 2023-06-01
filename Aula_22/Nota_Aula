@@ -19,3 +19,13 @@ FIM EXEMPLO
 
 o auto retira a referência, mas não o const
 
+Não se especializa template de função
+
+Para especialização de template tem o seguinte truque
+template <typename t> struct t; => template primário
+template <typename t, typename... ts> struct t<>; template especializado
+
+
+Conceito -> SFINAE => Substitution Failure Is Not An Error
+
+std::enable_if => ele é uma verificação
