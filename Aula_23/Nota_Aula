@@ -1,0 +1,4 @@
+-2:-1:-4 => começa de -2 e vai incrementando de -1 em -1 até chegar em -4
+eye() => matriz identidade
+ones() => matriz unitária
+zeros() => matriz de zeros
