@@ -2,3 +2,6 @@
 eye() => matriz identidade
 ones() => matriz unitária
 zeros() => matriz de zeros
+
+
+API
