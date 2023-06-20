@@ -1,0 +1,8 @@
+Neste trabalho será implementando funções embutidas. Elas são:
+
+- function A = zeros(m, n) => Em soma de escalar com matriz, o escalar é somado em todos os elementos da matriz.
+- function A = ones(m, n) => Devolve uma matriz com todos os elementos com 1
+- function A = eye(n) => Devolve uma matriz quadrada identidade
+- function A = diag(d) => Devolve uma matriz quadrada com o vetor "d" na diagonal principal (da esquerda para direita) (lembrando que 1:5 significa numeros de 1 até 5 que, por default, terá uma soma de 1 em 1)
+- Não se pode passar matriz 1, somente de 2 ou mais
+
