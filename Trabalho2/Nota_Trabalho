@@ -5,4 +5,8 @@ Neste trabalho será implementando funções embutidas. Elas são:
 - function A = eye(n) => Devolve uma matriz quadrada identidade
 - function A = diag(d) => Devolve uma matriz quadrada com o vetor "d" na diagonal principal (da esquerda para direita) (lembrando que 1:5 significa numeros de 1 até 5 que, por default, terá uma soma de 1 em 1)
 - Não se pode passar matriz 1, somente de 2 ou mais
-
+- function [idx, d2] = knn(X, p, n) => X é uma matriz cujas colunas são dimensões, p é um ponto dedimencional ele possui um numero de elementos igual a coluna de X e n irá procurar os numeros mais próximos de p. Ele devolve um vetor contendo os índices, caso ele seja chamado individualmente.
+Ex: idx = knn(A, b, 10) => neste caso só estamos interessados somente no idx
+    [idx,  d2] = knn(A, b, 10) => Neste caso devolve os 2 índices.
+    
+Para achar a função, primeiramente é necessário que ele esteje na tabela de símbolos. Para isso tem que mexer mais em Header Files > symbol > Function.h
