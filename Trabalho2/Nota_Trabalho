@@ -10,3 +10,18 @@ Ex: idx = knn(A, b, 10) => neste caso só estamos interessados somente no idx
     [idx,  d2] = knn(A, b, 10) => Neste caso devolve os 2 índices.
     
 Para achar a função, primeiramente é necessário que ele esteje na tabela de símbolos. Para isso tem que mexer mais em Header Files > symbol > Function.h
+Tem que mexer no function declaretion cpp, tem que resolver a linha 49, tem q verificar se há um mesmo escopo com nome igual e verificar se não há parâmetros replicados. No Function Declaration.cpp Na funsão resolve, na linha 49 têm que se criar uma forma dele verificar se não há parâmetrou e nomes iguais. ast/FunctionDeclaration
+
+(1) Mexer no ast/FunctionDeclaration E/OU symbol/Function
+
+(2) ast/Reference criar chamar função no método de resolução(*)
+
+(3) Alterar ast/Assignment(#) na função execute
+
+(4) Na calc: Inicialização de funções nativas
+
+
+Function Frame ou registro de ativação é uma área na memória que amntém a entrada, os dados e a saída de uma função.
+Criar um function frame que toma dois argumentos inteiros, num de param de entrada e nem param de saida e sua função nativa devolve com ponteiro para frame function
+
+função nativa pode ser std::function<void(FrameFunction*)>
