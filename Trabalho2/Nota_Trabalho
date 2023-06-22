@@ -25,3 +25,22 @@ Function Frame ou registro de ativação é uma área na memória que amntém a 
 Criar um function frame que toma dois argumentos inteiros, num de param de entrada e nem param de saida e sua função nativa devolve com ponteiro para frame function
 
 função nativa pode ser std::function<void(FrameFunction*)>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Continuação
+
+reference.cpp linha 120 // Avaliar a chamada de função. Criar um frame a função a ser executada, chamara função que irá executar a referência. Terá que deletar o rame criado, ela irá devolver um valor. Ela tem que possuir as entradas da função e as saídas. Ex: 4 saídas e 3 entradas, prioridade da primeira saída
+
+Assignnment.cpp linha 46 // Modificar para referência quando somente é dita
+Assignnment.cpp linha 54 // Dizer se existe uma referência ou não
+  _reference = dynamic_cast<Reference*>(_expression.get()); // dynamic_cast irá devolver um nullpointer caso ele não seja uma referência
+
+Assignment.cpp linha 133 
+if(_reference)
+	  if (auto function = _reference->function) 
+	  {
+		  // efetuar uma chamada de function de forma similiar a de referência. Em seguida setar o valor de cada referência de lhs com o valor correspondente da saída da função que irá estar disponível no frame
+		  frame = 
+		  return NEXT;
+	  }
